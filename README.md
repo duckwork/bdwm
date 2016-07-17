@@ -1,26 +1,26 @@
-###SWM
+# Bob Dole Window Manager
 
+_No, **you're** [Bob Dole][]!_
 
-##Installing
-```sh
-$ git clone https://github.com/dcat/swm
-$ cd swm
-$ make
-$ sudo make install
-```
+![The man himself, ladies and gentlemen.](img/dole.jpg)
 
-##Guidelines
+That's right, I'm writing a window manager named after the guy who ran against
+Bill Clinton and apparently blinked a lot.  I'm writing it because I want to
+use [wmutils][] without worrying about handling the mouse, [swm][] is *too*
+simple, and [2bwm][] and friends are a little more than I bargained for.  Also
+I'm definitely procrastinating somehow.  At least this is better than porn!
 
-- we follow OpenBSD's KNF [style(9)](http://www.openbsd.org/cgi-bin/man.cgi/OpenBSD-5.6/man9/style.9)
-- code correctness
+[Bob Dole]: http://www.bobdole.org
+[wmutils]: https://github.com/wmutils
+[swm]: https://github.com/dcat/swm
+[2bwm]: https://github.com/venam/2bwm
 
-##TODO
+## Installing
 
-- tidy up
-- readability
-- debug
+    git clone https://github.com/duckwork/bdwm
+    cd bdwm
+    make && sudo make install
 
+## Screenshot
 
-##Screenshot
-
-![swm](http://pub.iotek.org/p/260H6r1.png)
+TODO

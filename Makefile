@@ -1,5 +1,5 @@
-BIN = swm
-SRC = swm.c
+BIN = bdwm
+SRC = bdwm.c
 OBJ ?= ${SRC:.c=.o}
 LDFLAGS += -lxcb
 

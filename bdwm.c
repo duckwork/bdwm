@@ -291,8 +291,8 @@ events_loop(void)
 			} else if (values[2] == 3) {
 				geom = xcb_get_geometry_reply(conn,
 					xcb_get_geometry(conn, win), NULL);
-				values[0] = pointer->root_x - geom->x;
-				values[1] = pointer->root_y - geom->y;
+				values[0] = abs(pointer->root_x - geom->x);
+				values[1] = abs(pointer->root_y - geom->y);
 				xcb_configure_window(conn, win,
 					XCB_CONFIG_WINDOW_WIDTH
 					| XCB_CONFIG_WINDOW_HEIGHT, values);
