@@ -23,6 +23,11 @@ I'm definitely procrastinating somehow.  At least this is better than porn!
     cd bdwm
     make && sudo make install
 
+## Features on top of SWM
+
+- Doesn't crash on resize (uses abs(3) like 2bwm)
+- TODO: loads colors from Xresources
+
 ## Screenshot
 
 TODO
