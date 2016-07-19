@@ -1,9 +1,9 @@
 #define MOD		ALT /* modifier for mouse resize and move */
 
 /* INNER + OUTER should not be greater than BORDERWIDTH */
-#define BORDERWIDTH	4		/*  full  border width */
-#define INNER		1		/*  inner border width */
-#define OUTER		3		/*  outer border width */
+#define OUTER			3
+#define BORDERWIDTH		4
+#define INNER			(BORDERWIDTH - OUTER)
 
 /* colors */
 #define FOCUSCOL	0xFFFF00

@@ -23,6 +23,7 @@
 #define SHIFT		XCB_MOD_MASK_SHIFT
 
 #include <xcb/xcb.h>
+#include <xcb/xcb_xrm.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <err.h>
@@ -56,8 +57,11 @@ deploy(void)
 	/* init xcb and grab events */
 	uint32_t values[2];
 	int mask;
+	xcb_connection_t* conn;
 
-	if (xcb_connection_has_error(conn = xcb_connect(NULL, NULL)))
+	conn = xcb_connect(NULL, NULL);
+
+	if (xcb_connection_has_error(conn) || conn == NULL)
 		return -1;
 
 	scr = xcb_setup_roots_iterator(xcb_get_setup(conn)).data;
@@ -321,6 +325,14 @@ events_loop(void)
 		xcb_flush(conn);
 		free(ev);
 	}
+}
+
+void
+load_xrm(xcb_connection_t* conn)
+{
+	xcb_xrm_database_t* database = xcb_xrm_database_from_default(conn);
+	if (database == NULL)
+		return;
 }
 
 int

@@ -1,7 +1,7 @@
 BIN = bdwm
 SRC = bdwm.c
 OBJ ?= ${SRC:.c=.o}
-LDFLAGS += -lxcb
+LDFLAGS += -lxcb -lxcb-xrm
 
 include config.mk
 
