@@ -2,12 +2,12 @@
 
 /* INNER + OUTER should not be greater than BORDERWIDTH */
 #define OUTER			3
+#define INNER			2
 #define BORDERWIDTH		5
-#define INNER			(BORDERWIDTH - OUTER)
 
 /* colors */
 #define FOCUSCOL	0xFFFF00
-#define UNFOCUSCOL	0x000080
+#define UNFOCUSCOL	0x222222
 #define OUTERCOL	0x111111
 
 /* resize and move by mouse? */
