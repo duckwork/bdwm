@@ -18,7 +18,7 @@
 
 /* sane modifier names */
 #define SUPER		XCB_MOD_MASK_4
-#define ALT			XCB_MOD_MASK_1
+#define ALT		XCB_MOD_MASK_1
 #define CTRL		XCB_MOD_MASK_CONTROL
 #define SHIFT		XCB_MOD_MASK_SHIFT
 
@@ -31,8 +31,8 @@ enum { INACTIVE, ACTIVE };
 
 /* global variables */
 static xcb_connection_t		*conn;
-static xcb_screen_t			*scr;
-static xcb_window_t			 focuswin;
+static xcb_screen_t		*scr;
+static xcb_window_t		 focuswin;
 
 /* proto */
 static void subscribe(xcb_window_t);
@@ -340,3 +340,5 @@ main(void)
 
 	return EXIT_FAILURE;
 }
+
+/* vim: set noet sw=8 sts=8: */
