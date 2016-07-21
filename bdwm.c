@@ -23,7 +23,6 @@
 #define SHIFT		XCB_MOD_MASK_SHIFT
 
 #include <xcb/xcb.h>
-#include <xcb/xcb_xrm.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <err.h>
@@ -325,14 +324,6 @@ events_loop(void)
 		xcb_flush(conn);
 		free(ev);
 	}
-}
-
-void
-load_xrm(xcb_connection_t* conn)
-{
-	xcb_xrm_database_t* database = xcb_xrm_database_from_default(conn);
-	if (database == NULL)
-		return;
 }
 
 int
