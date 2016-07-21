@@ -56,11 +56,7 @@ deploy(void)
 	/* init xcb and grab events */
 	uint32_t values[2];
 	int mask;
-	xcb_connection_t* conn;
-
-	conn = xcb_connect(NULL, NULL);
-
-	if (xcb_connection_has_error(conn) || conn == NULL)
+	if (xcb_connection_has_error(conn = xcb_connect(NULL, NULL)))
 		return -1;
 
 	scr = xcb_setup_roots_iterator(xcb_get_setup(conn)).data;
@@ -340,5 +336,3 @@ main(void)
 
 	return EXIT_FAILURE;
 }
-
-/* vim: set noet sw=8 sts=8: */
